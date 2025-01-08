@@ -1,0 +1,49 @@
+HeroBrowser
+A simple web browser built using PyQt5 and PyQtWebEngine. This browser features essential navigation tools such as Back, Forward, Reload, and Home, with a user-friendly URL bar for navigating to different websites.
+
+Features
+Back Button: Navigate to the previous page.
+Forward Button: Move to the next page.
+Reload Button: Refresh the current page.
+Home Button: Navigate to a predefined home page (LinkedIn profile in this case).
+URL Bar: Enter URLs to navigate to specific websites.
+Prerequisites
+Before running the application, ensure you have the following installed:
+
+Python 3.x
+PyQt5
+PyQtWebEngine
+You can install the required packages using pip:
+
+bash
+Copy code
+pip install PyQt5 PyQtWebEngine
+Installation
+Clone the repository or download the source code.
+Navigate to the project directory.
+Usage
+Run the application by executing the following command:
+
+bash
+Copy code
+python main.py
+The browser will launch and open Google as the default home page. Use the navigation bar to browse other websites.
+
+Home Page
+By default, the Home button navigates to a LinkedIn profile. You can change the home page by modifying the navigate_home method in the MainWindow class:
+
+python
+Copy code
+def navigate_home(self):
+    self.browser.setUrl(QUrl('https://www.linkedin.com/in/tanish-singh-a5055a265/'))
+Customization
+Change Home Page: Modify the URL in the navigate_home method.
+Initial Page: Set a different initial URL in the constructor of the MainWindow class:
+python
+Copy code
+self.browser.setUrl(QUrl('http://your-start-page.com'))
+Contributing
+Feel free to fork the repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
